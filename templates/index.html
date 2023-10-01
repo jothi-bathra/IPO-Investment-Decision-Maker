@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Application Form</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Include your custom CSS for styling -->
+    <style>
+        /* Add your custom styles here */
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            margin-top: 30px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+        .form-heading {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .btn-check {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+        }
+        .btn-check:hover {
+            background-color: #0056b3;
+        }
+        .result-box {
+            background-color: #f7f7f7;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="form-heading">IPO investment Prediction</h2>
+        <form action="/input" method="POST"> <!-- Replace "/submit" with your actual backend endpoint -->
+            <div class="result-box">
+                <!-- Display backend results here -->
+              <h3><center><b> {{msg}}</b></center></h3>
+            </div>
+            <div class="form-group">
+                <label for="issueSize">Issue Size (crores)</label>
+                <input type="text" class="form-control" id="issueSize" name="issueSize" required>
+            </div>
+            <div class="form-group">
+                <label for="issuePrice">Issue Price</label>
+                <input type="text" class="form-control" id="issuePrice" name="issuePrice" required>
+            </div>
+            <div class="form-group">
+    <label for="city">City</label>
+    <select class="form-control" id="city" name="city" required>
+        
+        <option value="9">Mumbai</option>
+        <option value="5">Gurugram</option>
+        <option value="1">Bengaluru</option>
+        <option value="6">Hyderabad</option>
+
+        <option value="11">New Delhi</option>
+        <option value="3">Chennai</option>
+        <option value="7">Kolkata</option>
+        <option value="10">Navi Mumbai </option>
+
+        <option value="13">Pune</option>
+        <option value="20">Vadodara</option>
+        <option value="18">Thrissur</option>
+        <option value="17">Thane</option>
+
+        <option value="16">Surat</option>
+        <option value="12">Noida</option>
+        <option value="14">Rajkot</option>
+        <option value="19">Udaipur</option>
+
+        <option value="8">Lucknow</option>
+        <option value="15">Secunderabad</option>
+        <option value="4">Coimbatore</option>
+        <option value="2">Chandigarh</option>
+        <option value="0">Ahmedabad</option>
+        <!-- Add more cities as needed -->
+    </select>
+</div>
+            <!-- Add more form fields for City, Country, Industry, Sector, Employee count, etc. -->
+            <div class="form-group">
+                <label for="country">Country</label>
+                <input type="text" class="form-control" id="country" name="country" required>
+            </div>
+
+            <div class="form-group">
+            <label for="industry">Industry</label>
+    <select class="form-control" id="industry" name="industry" prequired>
+<option value="37">	Specialty Chemicals                       	</option>
+<option value="5">	Banks-Regional                             	</option>
+<option value="34">	Restaurants                                	</option>
+<option value="4">	Auto Parts                                 	</option>
+<option value="15">	Drug Manufacturers-Specialty & Generic     	</option>
+<option value="17">	Engineering & Construction                 	</option>
+<option value="20">	Information Technology Services            	</option>
+<option value="13">	Diagnostics & Research                     	</option>
+<option value="30">	Mortgage Finance                           	</option>
+<option value="12">	Credit Services                            	</option>
+<option value="1">	Agricultural Inputs                        	</option>
+<option value="40">	Telecom Services                           	</option>
+<option value="29">	Metal Fabrication                          	</option>
+<option value="0">	Aerospace & Defense                        	</option>
+<option value="2">	Asset Management                           	</option>
+<option value="23">	Internet Retail                            	</option>
+<option value="38">	Specialty Industrial Machinery             	</option>
+<option value="36">	Solar                                      	</option>
+<option value="32">	Railroads                                  	</option>
+<option value="8">	Capital Markets                            	</option>
+<option value="22">	Internet Content & Information             	</option>
+<option value="14">	Drug Manufacturers-General                 	</option>
+<option value="31">	Packaged Foods                             	</option>
+<option value="43">	Waste Management                           	</option>
+<option value="10">	Conglomerates                              	</option>
+<option value="19">	Furnishings, Fixtures & Appliances         	</option>
+<option value="27">	Medical Devices                            	</option>
+<option value="28">	Medical Instruments & Supplies             	</option>
+<option value="18">	Food Distribution                          	</option>
+<option value="41">	Travel Services                            	</option>
+<option value="25">	Luxury Goods                               	</option>
+<option value="16">	Electronic Gaming & Multimedia             	</option>
+<option value="33">	Real Estate-Development                    	</option>
+<option value="42">	Utilities-Regulated Electric               	</option>
+<option value="39">	Steel                                      	</option>
+<option value="11">	Consulting Services                        	</option>
+<option value="26">	Medical Care Facilities                    	</option>
+<option value="7">	Building Products & Equipment              	</option>
+<option value="3">	Auto & Truck Dealerships                   	</option>
+<option value="6">	Building Materials                         	</option>
+<option value="9">	Chemicals                                  	</option>
+<option value="21">	Insurance Brokers                          	</option>
+<option value="35">	Software-Infrastructure                    	</option>
+<option value="24">	Lodging                                    	</option>
+</select></div>
+
+<div class="form-group">
+            <label for="sector">Sector</label>
+    <select class="form-control" id="sector" name="sector" required>
+
+<option value="0">	Basic Materials                       	</option>
+<option value="2">	Consumer Cyclical                            	</option>
+<option value="6">	Industrials                                	</option>
+<option value="4">	Financial Services                                 	</option>
+<option value="5">	Healthcare    	</option>
+<option value="8">	Technology                 	</option>
+<option value="1">	Communication Services           	</option>
+<option value="3">	Consumer Defensive                     	</option>
+<option value="9">	Utilities                         	</option>
+<option value="7">	Real Estate                           	</option>
+</select></div>
+
+<div class="form-group">
+    <label for="ecount">Employee Count</label>
+    <input type="text" class="form-control" id="ecount" name="ecount" required>
+</div>
+
+<div class="form-group">
+    <label for="tshare">Total shares</label>
+    <input type="text" class="form-control" id="tshare" name="tshare" required>
+</div>
+
+<div class="form-group">
+    <label for="revenue">Revenue</label>
+    <input type="text" class="form-control" id="revenue" name="revenue" required>
+</div>
+
+<div class="form-group">
+    <label for="income">Income</label>
+    <input type="text" class="form-control" id="income" name="income" required>
+</div>
+
+<div class="form-group">
+    <label for="dividend">Dividend per share</label>
+    <input type="text" class="form-control" id="dividend" name="dividend" required>
+</div>
+
+<div class="form-group">
+    <label for="liabilities">Liabilities</label>
+    <input type="text" class="form-control" id="liabilities" name="liabilities" required>
+</div>
+
+<div class="form-group">
+    <label for="asset">Assets</label>
+    <input type="text" class="form-control" id="asset" name="asset" required>
+</div>
+
+
+
+            <div class="form-group">
+                <input type="submit" class="btn btn-check btn-block" id="checkButton" value="SUBMIT">
+            </div>
+        </form>
+       
+    </div>
+
+    <!-- Include Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Add your custom JavaScript for handling form submission and displaying results -->
+    <script>
+        // Add your custom JavaScript here
+        document.getElementById('checkButton').addEventListener('click', function() {
+            // You can use JavaScript to send the form data to your Flask backend and display the result in the "result-box" div.
+            // Make an AJAX request or use fetch() to send data to the backend.
+            // Update the content of the "result-box" div with the response from the backend.
+        });
+    </script>
+</body>
+</html>
